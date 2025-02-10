@@ -1,44 +1,42 @@
-{
-  "Books": [
-    {
-      "title": "The Great Gatsby",
-      "author": "F. Scott Fitzgerald",
-      "isbn": 9780743273565,
-      "publishDate": "1925-04-10",
-      "category": "Classic Fiction",
-      "price": 10.99
-    },
-    {
-      "title": "1984",
-      "author": "George Orwell",
-      "isbn": 9780451524935,
-      "publishDate": "1949-06-08",
-      "category": "Dystopian Fiction",
-      "price": 9.99
-    },
-    {
-      "title": "To Kill a Mockingbird",
-      "author": "Harper Lee",
-      "isbn": 9780061120084,
-      "publishDate": "1960-07-11",
-      "category": "Classic Fiction",
-      "price": 7.99
-    },
-    {
-      "title": "The Catcher in the Rye",
-      "author": "J.D. Salinger",
-      "isbn": 9780316769488,
-      "publishDate": "1951-07-16",
-      "category": "Young Adult Fiction",
-      "price": 8.99
-    },
-    {
-      "title": "The Hobbit",
-      "author": "J.R.R. Tolkien",
-      "isbn": 9780345339683,
-      "publishDate": "1937-09-21",
-      "category": "Fantasy",
-      "price": 12.99
-    }
-  ]
-}
+[
+  {
+    "title": "1984",
+    "author": "George Orwell",
+    "isbn": 9780451524935,
+    "publishDate": "1949-06-08",
+    "category": "Dystopian Fiction",
+    "price": 9.99
+  },
+  {
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "isbn": 9780061120084,
+    "publishDate": "1960-07-11",
+    "category": "Classic Fiction",
+    "price": 7.99
+  },
+  {
+    "title": "The Catcher in the Rye",
+    "author": "J.D. Salinger",
+    "isbn": 9780316769488,
+    "publishDate": "1951-07-16",
+    "category": "Young Adult Fiction",
+    "price": 8.99
+  },
+  {
+    "title": "The Hobbit",
+    "author": "J.R.R. Tolkien",
+    "isbn": 9780345339683,
+    "publishDate": "1937-09-21",
+    "category": "Fantasy",
+    "price": 12.99
+  },
+  {
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "isbn": 9780743273565,
+    "publishDate": "1925-04-10",
+    "category": "Classic Fiction",
+    "price": 10.99
+  }
+]
