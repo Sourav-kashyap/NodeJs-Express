@@ -1,8 +1,8 @@
-export interface book{
-    title: string,
-    author:string,
-    isbn:number,
-    publishDate:string,
-    category:string,
-    price:number
+export interface Book {
+  title: string;
+  author: string;
+  isbn: number;
+  publishDate: string;
+  category: string;
+  price: number;
 }
