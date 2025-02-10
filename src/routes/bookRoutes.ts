@@ -10,7 +10,7 @@ const router = Router();
 
 router.get("/all-books", getAllBooks);
 router.post("/add-book", addBook);
-router.patch("/update-book/:id", updateBook);
-router.delete("/delete-book/:id", deleteBook);
+router.patch("/update-book/:index", updateBook);
+router.delete("/delete-book/:index", deleteBook);
 
 export default router;

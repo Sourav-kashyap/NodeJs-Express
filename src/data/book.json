@@ -1,13 +1,5 @@
 [
   {
-    "title": "1984",
-    "author": "George Orwell",
-    "isbn": 9780451524935,
-    "publishDate": "1949-06-08",
-    "category": "Dystopian Fiction",
-    "price": 9.99
-  },
-  {
     "title": "To Kill a Mockingbird",
     "author": "Harper Lee",
     "isbn": 9780061120084,

@@ -77,10 +77,61 @@ export const addBook = async (req: Request, res: Response) => {
   }
 };
 
-export const deleteBook = (req: Request, res: Response) => {
-  res.send("delete");
+export const deleteBook = async (req: Request, res: Response) => {
+  try {
+    const index = parseInt(req.params.index, 10);
+    const data = await getBooks();
+    if (isNaN(index) || index < 0 || index >= data.length) {
+      res.status(400).send({ message: "Invalid index provided" });
+      return;
+    }
+    data.splice(index, 1);
+    await fs.promises.writeFile(
+      db_path,
+      JSON.stringify(data, null, 2),
+      "utf-8"
+    );
+    res.status(200).send({ message: "Book deleted successfully" });
+  } catch (error) {
+    console.error("Error deleting book:", error);
+    res
+      .status(500)
+      .send({ message: "An error occurred while deleting the book." });
+  }
 };
 
-export const updateBook = (req: Request, res: Response) => {
-  res.send("update");
+export const updateBook = async (req: Request, res: Response) => {
+  try {
+    const index = parseInt(req.params.index, 10);
+    const data = await getBooks();
+    if (isNaN(index) || index < 0 || index >= data.length) {
+      res.status(400).send({ message: "Invalid index provided" });
+    }
+    // Validate the incoming request body with Joi schema
+    const { error } = bookSchema.validate(req.body);
+    // If validation fails, return a 400 Bad Request with the error message
+    if (error) {
+      res.status(400).send({ message: error.details[0].message });
+      return;
+    }
+    const { title, author, isbn, publishDate, category, price } = req.body;
+    if (!title || !author || !isbn || !publishDate || !category || !price) {
+      res.status(400).send({ message: "All fields are required" });
+      return;
+    }
+    data[index] = { title, author, isbn, publishDate, category, price };
+    await fs.promises.writeFile(
+      db_path,
+      JSON.stringify(data, null, 2),
+      "utf-8"
+    );
+    res
+      .status(200)
+      .send({ message: "Book updated successfully", data: data[index] });
+  } catch (error) {
+    console.error("Error updating book:", error);
+    res
+      .status(500)
+      .send({ message: "An error occurred while updating the book." });
+  }
 };
